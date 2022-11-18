@@ -1,34 +1,34 @@
 [
     {
-      "id": "01",
+      "id": "1",
       "name": "HTML"
     },
     {
-      "id": "02",
+      "id": "2",
       "name": "CSS"
     },
     {
-      "id": "03",
+      "id": "3",
       "name": "Bootstrap"
     },
     {
-      "id": "04",
+      "id": "4",
       "name": "Tailwind"
     },
     {
-      "id": "05",
+      "id": "5",
       "name": "Javascript"
     },
     {
-      "id": "06",
+      "id": "6",
       "name": "React"
     },
     {
-      "id": "07",
+      "id": "7",
       "name": "Spoken English"
     },
     {
-      "id": "08",
+      "id": "8",
       "name": "Career Direction"
     }
   ]
