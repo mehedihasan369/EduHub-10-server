@@ -20,11 +20,11 @@ res.send(categories);
 
 const courseCollection = require("./Data/product.json");
 
-app.get("/product/:id", (req, res) => {
+app.get("/course/:id", (req, res) => {
     const id = req.params.id;
     const getSingleItem = courseCollection?.find((p) => p.id == id);
     if (!getSingleItem) {
-      res.send(" pai nai");
+      res.send("No Data");
     }
     res.send(getSingleItem);
   });
