@@ -9,13 +9,18 @@ const port =process.env.PORT || 5000;
 
 
 const categories = require('./data/categories.json');
-const course = require('./data/product.json');
+const blogs = require('./data/blogs.json');
+
+// const course = require('./data/product.json');
 
 app.get('/',(req,res) => {
 res.send('Course ApI Running');
 }); 
 app.get('/categories',(req,res) => {
 res.send(categories);
+}); 
+app.get('/blogs',(req,res) => {
+res.send(blogs);
 }); 
 
 const courseCollection = require("./Data/product.json");
