@@ -1,17 +1,17 @@
-const express = require('express');
-const app = express();
 
+const express = require('express');
 const cors =require('cors');
-app.use(cors());
+const app = express();
 const port =process.env.PORT || 5000;
+
+app.use(cors());
+
 
 
 
 
 const categories = require('./data/categories.json');
 const blogs = require('./data/blogs.json');
-
-// const course = require('./data/product.json');
 
 app.get('/',(req,res) => {
 res.send('Course ApI Running');
@@ -23,9 +23,12 @@ app.get('/blogs',(req,res) => {
 res.send(blogs);
 }); 
 
-const courseCollection = require("./Data/product.json");
+const courseCollection = require('./data/product.json');
 
-app.get("/course/:id", (req, res) => {
+
+
+
+app.get('/course/:id', (req, res) => {
     const id = req.params.id;
     const getSingleItem = courseCollection?.find((p) => p.id == id);
     if (!getSingleItem) {
@@ -35,11 +38,6 @@ app.get("/course/:id", (req, res) => {
   });
 
 
-
-
-
-
-
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
-  })  
+  })  ;
