@@ -36,6 +36,14 @@ app.get('/course/:id', (req, res) => {
     }
     res.send(getSingleItem);
   });
+app.get('/blogs/:id', (req, res) => {
+    const id = req.params.id;
+    const getSingleBlog = blogs?.find((p) => p.id == id);
+    if (!getSingleBlog) {
+      res.send("No Data");
+    }
+    res.send(getSingleBlog);
+  });
 
 
 app.listen(port, () => {
